@@ -43,12 +43,12 @@ while next_play != no:
             elif falumpaset_pick == 2: 
                 print("It looks like you made it your friend, you will be riding thru the dense swamps and forest to save the princess with your new friend.You see the castle.")  
                 castle = ["Wait", "Retreat", "Proceed"]
-                    print(1, castle[0])
-                    print(2, castle[1])
-                    print(3, castle[2])
-                    castle_pick = int(input("Select your options: 1: Wait. Select 2: Retreat. Select 3 Proceed")
-                    if castle_pick ==1: 
-                        print ("You waited to long and you died of hunger")
+                print(1, castle[0])
+                print(2, castle[1])
+                print(3, castle[2])
+                castle_pick = int(input("Select your options: 1: Wait. Select 2: Retreat. Select 3 Proceed")
+                if castle_pick ==1: 
+                	print ("You waited to long and you died of hunger")
                         next_play= input("Do you want to play again? Type yes or no")
                     elif castle_pick ==2:
                         print ("You are a coward!. You retreated and died.")
@@ -83,7 +83,8 @@ while next_play != no:
     print ("It looks like you chose the trail in the Middle.",username, "You encounter a forest and a witch casts a spell and you are not able to move for a 1000 years. Game Ended")
     next_play = input("Do you want to play again? Type yes or no")
  else:
-    print("You ended the game"
+    print("You ended the game")
+
 
 
 
