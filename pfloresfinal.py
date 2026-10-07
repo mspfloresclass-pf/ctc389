@@ -7,7 +7,12 @@
 
 
 next_play = "yes"
-
+def awesome ():
+    print("YOUR ARE AWESOME!")
+    print("YOUR ARE AWESOME!")
+    print("YOUR ARE AWESOME!")
+    print("YOUR ARE AWESOME!")
+    print("YOUR ARE AWESOME!")
 
 
 while next_play == "yes" or next_play == "y":
@@ -23,9 +28,14 @@ while next_play == "yes" or next_play == "y":
     print(3, trails[2])
 
     your_pick = int(input("Select your options:1: Trail to your Right. Select 2: Trail to your Left. Select 3: Trail in the Middle: "))
+   
+    while your_pick < 1 or your_pick > 3:
+        print("You made an invalid choice. Please choose 1,2, or 3.")
+        your_pick = int(input("Select your options:1: Trail to your Right. Select 2: Trail to your Left. Select 3: Trail in the Middle: "))
     decision_count = decision_count + 1
-    
+    print("You made a valid choice!")
     if your_pick == 1:
+        awesome()
         print ("It looks like you chose the trail to your right.",username)
         print ("You will encounter Captain Panaka Head of the Royal Security Force,")
         print ("He greets you and gives you secret information to save the princess. You must choose what transportation you will use to save the princess.")
@@ -37,26 +47,31 @@ while next_play == "yes" or next_play == "y":
         print(3, travel[2])
         travel_pick = int(input("Select your transportation: 1: Royal Starfighter Select 2: Water Tunnels  Select 3: Kaadu Calvary: "))
         decision_count = decision_count + 1
-        if   travel_pick ==1:
-             print("You have Chosen the Starfighter and you have crashed and burned. You died")
-             next_play = input("Do you want to play again? Type yes or no: ")
+        if travel_pick ==1:
+            print("You have Chosen the Starfighter and you have crashed and burned. You died")
+            next_play = input("Do you want to play again? Type yes or no: ")
         elif travel_pick ==2:
-             print("You have chosen to use the dense swamps and forest to save the princess. You encounter a Falumpaset and you have to make a choice.")
-             print("You made", decision_count, "Correct Decisions")
-
+            awesome()
+            print()
+            print("You have chosen to use the dense swamps and forest to save the princess. You encounter a Falumpaset and you have to make a choice.")
+            print("You made", decision_count, "Correct Decisions")
+            print()
 # Decision 3 - Choose what to do with the Falumpaset
-             falumpaset = ["Kill the Falumpaset", "Make it your friend", "Ignore the Falumpaset"] 
-             print(1, falumpaset[0])
-             print(2, falumpaset[1])
-             print(3, falumpaset[2])
-             falumpaset_pick = int(input("Select your options:1: Kill the Falumpaset. Select 2: Make it your Friend. Select 3: Ignore the Falumpaset: "))
-             decision_count = decision_count +1
-             if falumpaset_pick == 1:
+            falumpaset = ["Kill the Falumpaset", "Make it your friend", "Ignore the Falumpaset"] 
+            print(1, falumpaset[0])
+            print(2, falumpaset[1])
+            print(3, falumpaset[2])
+            falumpaset_pick = int(input("Select your options:1: Kill the Falumpaset. Select 2: Make it your Friend. Select 3: Ignore the Falumpaset: "))
+            decision_count = decision_count +1
+            if falumpaset_pick == 1:
                 print ("You killed the Falumpaset. It fought back and left you severly injured you are now dead.")
                 next_play=input("Do you want to play again? Type yes or no: ")
-             elif falumpaset_pick == 2: 
+            elif falumpaset_pick == 2:
+                awesome()
+                print() 
                 print("It looks like you made it your friend, you will be riding thru the Dense Swamps and Forest to save the princess with your new friend.You see the castle.")  
                 print("You made", decision_count, "Correct Decisions")
+                print()
 # Decision 4 - Choose what to do at the Castle
                 castle = ["Wait", "Retreat", "Proceed"]
                 print(1, castle[0])
@@ -71,8 +86,11 @@ while next_play == "yes" or next_play == "y":
                      print ("You are a COWARD!. You retreated and died.")
                      next_play = input("Do you want to play again? Type yes or no: ")
                 elif castle_pick ==3:
+                     awesome()
+                     print()
                      print("Wise choice to proceed. You see three doors to the castle. Which one do you choose?")
                      print("You made", decision_count, "Correct Decisions")
+                     print()
 
 # Decision 5 - Choose a Door
 
@@ -86,9 +104,12 @@ while next_play == "yes" or next_play == "y":
                         print ("You met Darth Vader and dualed you to the death with a lightsaver. YOU LOOSE!")
                         next_play = input("Do you want to play again? Type yes or no: ")
                      elif door_pick ==2:
-                          print ("You saved the princess!", username,",She was behind this door! You DEFEATED the STORM TROOPERS! GOOD JOB!")
-                          print("You made", decision_count, "Correct Decisions")
-                          next_play = input("Do you want to play again? Type yes or no: ")
+                         awesome()
+                         print()                          
+                         print ("You saved the princess!", username,",She was behind this door! You DEFEATED the STORM TROOPERS! GOOD JOB!")
+                         print("You made", decision_count, "Correct Decisions")
+                         print()
+                         next_play = input("Do you want to play again? Type yes or no: ")
                      elif door_pick ==3:
                           print("You encountered Storm Troopers. You fought a terrific battle but DIED!")
                           next_play = input("Do you want to play again? Type yes or no: ")
@@ -96,12 +117,10 @@ while next_play == "yes" or next_play == "y":
                        print("You ended the game.")
                        next_play = input("Do you want to play again? Type yes or no: ")
 
-
-            
-             elif falumpaset_pick == 3: 
-                  print("It looks like you chose to ignore the Falumpaset. You died by yourself")
-                  next_play=input("Do you want to play again. Type yes or no: ")
-             else: 
+            elif falumpaset_pick == 3: 
+                print("It looks like you chose to ignore the Falumpaset. You died by yourself")
+                next_play=input("Do you want to play again. Type yes or no: ")
+            else: 
                 print ("You ended the game.")
                 next_play = input("Do you want to play again? Type yes or no: ")
 
